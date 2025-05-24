@@ -1,0 +1,272 @@
+body {
+    font-family: 'Cairo', Tahoma, Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(120deg, #e3f0fa 0%, #f4f8fb 100%);
+    color: #222;
+}
+
+header {
+    background: #fff;
+    color: #003366;
+    padding: 0.7rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 12px #00336611;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+}
+
+.logo svg {
+    width: 54px;
+    height: 54px;
+    filter: drop-shadow(0 2px 6px #0077cc33);
+}
+
+.logo span {
+    font-size: 2em;
+    font-weight: bold;
+    color: #0077cc;
+    letter-spacing: 2px;
+    text-shadow: 0 1px 4px #00c6ff22;
+}
+
+nav {
+    display: flex;
+    gap: 1.5em;
+}
+
+nav a {
+    color: #003366;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.1em;
+    padding: 0.3em 1em;
+    border-radius: 20px;
+    transition: background 0.2s, color 0.2s;
+}
+
+nav a:hover {
+    background: #e3f0fa;
+    color: #0077cc;
+}
+
+.hero-bg {
+    background: linear-gradient(120deg, #003366cc 60%, #0077ccaa 100%), url('../images/earth-space.jpg') center/cover no-repeat;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 8px 32px #00336633;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    padding: 3em 1em 2em 1em;
+    background: rgba(0, 51, 102, 0.55);
+    border-radius: 32px;
+    box-shadow: 0 8px 32px #00336644;
+}
+
+.hero-content h1 {
+    font-size: 3.2em;
+    margin-bottom: 0.5em;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 12px #00336688;
+}
+
+.hero-content p {
+    font-size: 1.6em;
+    margin-bottom: 2em;
+    font-weight: 500;
+    text-shadow: 0 2px 8px #00336655;
+}
+
+.cta-btn, .video-btn {
+    display: inline-block;
+    margin: 0.5em 0.5em 0 0.5em;
+    background: linear-gradient(90deg, #00c6ff 0%, #0077cc 100%);
+    color: #fff;
+    padding: 1em 2.5em;
+    border-radius: 40px;
+    font-size: 1.2em;
+    font-weight: 800;
+    text-decoration: none;
+    box-shadow: 0 2px 16px #0077cc55;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.cta-btn:hover, .video-btn:hover {
+    background: linear-gradient(90deg, #0077cc 0%, #00c6ff 100%);
+    color: #fff;
+    transform: translateY(-3px) scale(1.04);
+}
+
+.video-btn {
+    background: #fff;
+    color: #0077cc;
+    border: 2px solid #00c6ff;
+    font-weight: 700;
+}
+
+.video-btn:hover {
+    background: #0077cc;
+    color: #fff;
+}
+
+section {
+    max-width: 1200px;
+    margin: 3rem auto;
+    background: #fff;
+    border-radius: 24px;
+    padding: 3rem 2rem;
+    box-shadow: 0 4px 32px #00336611;
+}
+
+h2 {
+    color: #0077cc;
+    margin-top: 0;
+    text-align: center;
+    font-size: 2.2em;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.features, .coverage, .partners, .faq-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.feature, .coverage-item, .partner, .faq {
+    flex: 1 1 220px;
+    min-width: 220px;
+    background: #f4f8fb;
+    border-radius: 16px;
+    padding: 1.7rem;
+    box-shadow: 0 2px 12px #0077cc11;
+    margin: 0.5rem;
+    text-align: center;
+    font-size: 1.15em;
+    font-weight: 600;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.feature:hover, .coverage-item:hover, .partner:hover, .faq:hover {
+    box-shadow: 0 4px 24px #0077cc22;
+    transform: translateY(-4px) scale(1.03);
+}
+
+.testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.testimonial {
+    flex: 1 1 260px;
+    min-width: 220px;
+    background: #f4f8fb;
+    border-radius: 16px;
+    padding: 1.7rem;
+    box-shadow: 0 2px 12px #0077cc11;
+    margin: 0.5rem;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.testimonial:hover {
+    box-shadow: 0 4px 24px #0077cc22;
+    transform: translateY(-4px) scale(1.03);
+}
+
+.contact-form {
+    max-width: 420px;
+    margin: 2rem auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background: #f4f8fb;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px #0077cc11;
+    padding: 2em 1.5em;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 1em;
+    border-radius: 10px;
+    border: 1px solid #c2e9fb;
+    font-size: 1.1em;
+    background: #fff;
+}
+
+.contact-form button {
+    background: linear-gradient(90deg, #0077cc 60%, #00c6ff 100%);
+    color: #fff;
+    padding: 0.9em 2em;
+    border-radius: 30px;
+    font-size: 1.1em;
+    font-weight: 800;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    margin-top: 0.5em;
+    box-shadow: 0 2px 8px #0077cc33;
+}
+
+.contact-form button:hover {
+    background: linear-gradient(90deg, #005fa3 60%, #0099cc 100%);
+    transform: translateY(-2px) scale(1.03);
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: #fff;
+    background: linear-gradient(90deg, #003366 60%, #0077cc 100%);
+    font-size: 1.1em;
+    margin-top: 2rem;
+    border-radius: 0 0 24px 24px;
+    box-shadow: 0 -2px 12px #00336622;
+}
+
+@media (max-width: 1100px) {
+    section { padding: 1.5rem 0.5rem; }
+}
+
+@media (max-width: 900px) {
+    .features, .coverage, .partners, .faq-list {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-content { padding: 1.5em 0.2em; }
+    .hero-content h1 { font-size: 1.3em; }
+    .logo svg { width: 32px; height: 32px; }
+    .logo span { font-size: 1em; }
+    header { flex-direction: column; gap: 0.5em; }
+}

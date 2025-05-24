@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>التسجيل - OneWorld SatNet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <svg viewBox="0 0 64 64" fill="none">
+                <circle cx="32" cy="32" r="30" fill="#0077cc" />
+                <ellipse cx="32" cy="32" rx="22" ry="8" fill="#fff" opacity="0.7"/>
+                <circle cx="32" cy="32" r="10" fill="#fff"/>
+                <path d="M32 22 L32 42" stroke="#0077cc" stroke-width="2"/>
+                <path d="M22 32 L42 32" stroke="#0077cc" stroke-width="2"/>
+            </svg>
+            <span>OneWorld SatNet</span>
+        </div>
+        <nav>
+            <a href="index.html">الرئيسية</a>
+            <a href="plans.html">الباقات</a>
+            <a href="partners.html">شركاؤنا</a>
+            <a href="#faq">الأسئلة الشائعة</a>
+            <a href="#contact">تواصل معنا</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>سجل الآن للحصول على خدمات الإنترنت الفضائي</h2>
+            <form class="contact-form" action="mailto:info@oneworldsatnet.com" method="POST" enctype="text/plain">
+                <input type="text" name="name" placeholder="الاسم" required>
+                <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+                <input type="tel" name="phone" placeholder="رقم الهاتف" required>
+                <select name="plan" required>
+                    <option value="" disabled selected>اختر الباقة</option>
+                    <option value="basic">باقة أساسية</option>
+                    <option value="standard">باقة قياسية</option>
+                    <option value="premium">باقة مميزة</option>
+                </select>
+                <textarea name="message" rows="4" placeholder="رسالتك (اختياري)"></textarea>
+                <button type="submit">إرسال</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        &copy; 2024 OneWorld SatNet. جميع الحقوق محفوظة.
+    </footer>
+</body>
+</html>
