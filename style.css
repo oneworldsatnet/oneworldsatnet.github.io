@@ -220,6 +220,86 @@ footer {
   margin-top: 40px;
   border-radius: 12px 12px 0 0;
 }
+.hero-img-group, .about-img-group, .compare-img-group, .plans-img-group, .features-img-group, .partners-img-group, .invest-img-group {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+  margin: 18px 0 18px 0;
+  flex-wrap: wrap;
+}
+.hero-img-group img, .about-img-group img, .compare-img-group img, .plans-img-group img, .features-img-group img, .partners-img-group img, .invest-img-group img {
+  max-width: 70px;
+  max-height: 70px;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px #0001;
+  background: #fff;
+  padding: 4px;
+}
+.global {
+  margin: 40px 0;
+  background: #f7fbff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 32px 0;
+}
+.global-img-group {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+  margin: 18px 0 18px 0;
+  flex-wrap: wrap;
+}
+.global-img-group img {
+  max-width: 70px;
+  max-height: 70px;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px #0001;
+  background: #fff;
+  padding: 4px;
+}
+.partners-list, .success-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 18px 0;
+}
+.partners-list li, .success-list li {
+  background: #e6f0fa;
+  color: #0a2342;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-weight: 500;
+  font-size: 1em;
+  box-shadow: 0 1px 4px #0001;
+}
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+  margin: 24px 0;
+}
+.testimonials blockquote {
+  background: #fff;
+  border-left: 4px solid #1e90ff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px #0001;
+  padding: 16px 22px;
+  max-width: 320px;
+  min-width: 220px;
+  font-style: italic;
+  margin: 0;
+}
+.testimonials footer {
+  font-size: 0.95em;
+  color: #0a2342;
+  margin-top: 8px;
+  font-style: normal;
+}
 @media (max-width: 1000px) {
   .hero-content, .about-flex, .plans, .partners-logos {
     flex-direction: column;
@@ -231,5 +311,15 @@ footer {
     display: block;
     text-align: center;
     margin-top: 10px;
+  }
+}
+@media (max-width: 900px) {
+  .testimonials {
+    flex-direction: column;
+    align-items: center;
+  }
+  .partners-list, .success-list {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
