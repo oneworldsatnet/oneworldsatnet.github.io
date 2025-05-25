@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OneWorld SatNet | Competitive Satellite Internet</title>
-  <meta name="description" content="Fast satellite internet, global coverage, competitive prices, Arabic support, Starlink competitor.">
+  <title>OneWorld SatNet | إنترنت فضائي تنافسي</title>
+  <meta name="description" content="إنترنت فضائي سريع، تغطية عالمية، أسعار تنافسية، دعم عربي، منافس ستارلينك.">
   <link rel="stylesheet" href="style.css">
   <script src="https://unpkg.com/i18next@21.6.16/dist/umd/i18next.min.js"></script>
   <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.5/dist/umd/i18nextBrowserLanguageDetector.min.js"></script>
@@ -15,15 +15,21 @@
     <div class="container">
       <img src="images/1.png" alt="OneWorld SatNet Logo" class="logo">
       <nav>
-        <a href="#about" data-i18n="about">About</a>
-        <a href="#compare" data-i18n="compare">Compare</a>
-        <a href="#plans" data-i18n="plans">Plans</a>
-        <a href="#features" data-i18n="features">Features</a>
-        <a href="#faq" data-i18n="faq">FAQ</a>
-        <a href="#partners" data-i18n="partners">Partners</a>
-        <a href="#invest" data-i18n="invest">Invest</a>
-        <a href="#contact" data-i18n="contact">Contact</a>
-        <a href="#signup" class="signup-btn" data-i18n="signup">Sign Up</a>
+        <div class="dropdown">
+          <button class="dropbtn">القائمة <span>☰</span></button>
+          <div class="dropdown-content">
+            <a href="#about" data-i18n="about">عن الشركة</a>
+            <a href="#compare" data-i18n="compare">المقارنة</a>
+            <a href="#plans" data-i18n="plans">الباقات</a>
+            <a href="#features" data-i18n="features">المميزات</a>
+            <a href="#faq" data-i18n="faq">الأسئلة الشائعة</a>
+            <a href="#partners" data-i18n="partners">الشركاء</a>
+            <a href="#invest" data-i18n="invest">الاستثمار</a>
+            <a href="#global" data-i18n="global">التواجد العالمي</a>
+            <a href="#contact" data-i18n="contact">تواصل معنا</a>
+            <a href="#signup" class="signup-btn" data-i18n="signup">اشترك الآن</a>
+          </div>
+        </div>
       </nav>
       <select id="languageSwitcher"></select>
     </div>
@@ -33,11 +39,11 @@
       <div class="container">
         <div class="hero-content">
           <div class="hero-text">
-            <h1 data-i18n="hero_title">Global Satellite Internet. Fast. Secure. For Everyone.</h1>
-            <p data-i18n="hero_desc">Enjoy high-speed, low-latency internet anywhere on earth. Flexible plans, 24/7 support, and coverage in every country. Join the new era of connectivity!</p>
-            <a href="#signup" class="cta" data-i18n="get_started">Get Started</a>
+            <h1 class="hero-title-rotating"><span>إنترنت عالمي فائق السرعة</span><span>اتصال آمن في كل مكان</span></h1>
+            <p class="hero-desc">خلي الموقع عالمي واحترافي ومميز: استمتع بإنترنت فضائي بسرعات عالية وتغطية شاملة وخدمة عملاء متعددة اللغات. حلول مبتكرة لكل بيت وشركة حول العالم.</p>
+            <a href="#signup" class="cta" data-i18n="get_started">ابدأ الآن</a>
           </div>
-          <div class="hero-img-group slider" id="heroSlider">
+          <div class="hero-img-group slider large-slider" id="heroSlider">
             <img src="images/1.png" alt="Hero 1">
             <img src="images/2.png" alt="Hero 2">
             <img src="images/3.png" alt="Hero 3">
@@ -49,7 +55,7 @@
     </section>
     <section id="about" class="about">
       <div class="container">
-        <h2 data-i18n="about_title">About OneWorld SatNet</h2>
+        <h2 data-i18n="about_title">عن OneWorld SatNet</h2>
         <div class="about-flex">
           <div class="about-img-group slider" id="aboutSlider">
             <img src="images/1.png" alt="About 1">
@@ -59,14 +65,14 @@
             <img src="images/5.png" alt="About 5">
           </div>
           <div class="about-text">
-            <p data-i18n="about_desc">OneWorld SatNet brings you the latest in satellite internet technology, powered by advanced LEO satellites and smart ground stations. We offer broader coverage, higher speeds, and more affordable prices than any other global provider.</p>
+            <p data-i18n="about_desc">تقدم لكم OneWorld SatNet أحدث تقنيات الإنترنت الفضائي، المدعومة بأقمار صناعية متقدمة ومحطات أرضية ذكية. نحن نقدم تغطية أوسع، سرعات أعلى، وأسعار أكثر تنافسية من أي مزود عالمي آخر.</p>
           </div>
         </div>
       </div>
     </section>
     <section id="compare" class="compare">
       <div class="container">
-        <h2 data-i18n="compare_title">Compare with Global Competitors</h2>
+        <h2 data-i18n="compare_title">المقارنة مع المنافسين العالميين</h2>
         <div class="compare-img-group slider" id="compareSlider">
           <img src="images/6.png" alt="Compare 1">
           <img src="images/7.png" alt="Compare 2">
@@ -77,41 +83,41 @@
         <table>
           <thead>
             <tr>
-              <th data-i18n="feature">Feature</th>
+              <th data-i18n="feature">الميزة</th>
               <th>OneWorld SatNet</th>
-              <th data-i18n="competitors">Other Providers</th>
+              <th data-i18n="competitors">مزودو الخدمة الآخرون</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td data-i18n="price">Monthly Price</td>
+              <td data-i18n="price">السعر الشهري</td>
               <td>$99</td>
               <td>$120+</td>
             </tr>
             <tr>
-              <td data-i18n="support">24/7 Multilingual Support</td>
-              <td>Yes</td>
-              <td>Limited</td>
+              <td data-i18n="support">دعم متعدد اللغات على مدار الساعة</td>
+              <td>نعم</td>
+              <td>محدود</td>
             </tr>
             <tr>
-              <td data-i18n="coverage">Global Coverage</td>
-              <td>Yes</td>
-              <td>Partial</td>
+              <td data-i18n="coverage">تغطية عالمية</td>
+              <td>نعم</td>
+              <td>جزئي</td>
             </tr>
             <tr>
-              <td data-i18n="flexible">Flexible Plans</td>
-              <td>Yes</td>
-              <td>No</td>
+              <td data-i18n="flexible">خطط مرنة</td>
+              <td>نعم</td>
+              <td>لا</td>
             </tr>
             <tr>
-              <td data-i18n="speed">Download Speed</td>
-              <td>Up to 250 Mbps</td>
-              <td>Up to 200 Mbps</td>
+              <td data-i18n="speed">سرعة التنزيل</td>
+              <td>حتى 250 ميجابت</td>
+              <td>حتى 200 ميجابت</td>
             </tr>
             <tr>
-              <td data-i18n="latency">Latency</td>
-              <td>20-40 ms</td>
-              <td>25-60 ms</td>
+              <td data-i18n="latency">زمن الانتقال</td>
+              <td>20-40 مللي ثانية</td>
+              <td>25-60 مللي ثانية</td>
             </tr>
           </tbody>
         </table>
@@ -119,44 +125,34 @@
     </section>
     <section id="plans" class="pricing">
       <div class="container">
-        <h2 data-i18n="plans_title">Plans</h2>
-        <div class="plans-img-group slider" id="plansSlider">
-          <img src="images/1.png" alt="Plans 1">
-          <img src="images/2.png" alt="Plans 2">
-          <img src="images/3.png" alt="Plans 3">
-          <img src="images/4.png" alt="Plans 4">
-          <img src="images/5.png" alt="Plans 5">
-        </div>
+        <h2 data-i18n="plans_title">الباقات</h2>
         <div class="plans">
-          <div class="plan">
-            <img src="images/4.png" alt="Basic Plan">
-            <h3 data-i18n="basic">Basic</h3>
+          <div class="plan plan-blue">
+            <h3 data-i18n="basic">أساسي</h3>
             <p class="price">$79/mo</p>
             <ul>
-              <li data-i18n="basic_speed">Up to 100 Mbps</li>
-              <li data-i18n="basic_coverage">Global coverage</li>
-              <li data-i18n="basic_support">24/7 support</li>
+              <li data-i18n="basic_speed">حتى 100 ميجابت</li>
+              <li data-i18n="basic_coverage">تغطية عالمية</li>
+              <li data-i18n="basic_support">دعم 24/7</li>
             </ul>
           </div>
-          <div class="plan popular">
-            <img src="images/5.png" alt="Premium Plan">
-            <h3 data-i18n="premium">Premium</h3>
+          <div class="plan plan-pink popular">
+            <h3 data-i18n="premium">مميز</h3>
             <p class="price">$99/mo</p>
             <ul>
-              <li data-i18n="premium_speed">Up to 250 Mbps</li>
-              <li data-i18n="premium_coverage">Wider coverage</li>
-              <li data-i18n="premium_support">Multilingual support</li>
-              <li data-i18n="premium_device">Free receiver device</li>
+              <li data-i18n="premium_speed">حتى 250 ميجابت</li>
+              <li data-i18n="premium_coverage">تغطية أوسع</li>
+              <li data-i18n="premium_support">دعم بلغات متعددة</li>
+              <li data-i18n="premium_device">جهاز استقبال مجاني</li>
             </ul>
           </div>
-          <div class="plan">
-            <img src="images/6.png" alt="Business Plan">
-            <h3 data-i18n="business">Business</h3>
+          <div class="plan plan-green">
+            <h3 data-i18n="business">أعمال</h3>
             <p class="price">$149/mo</p>
             <ul>
-              <li data-i18n="business_speed">Up to 500 Mbps</li>
-              <li data-i18n="business_manager">Dedicated account manager</li>
-              <li data-i18n="business_install">Fast installation</li>
+              <li data-i18n="business_speed">حتى 500 ميجابت</li>
+              <li data-i18n="business_manager">مدير حساب خاص</li>
+              <li data-i18n="business_install">تركيب سريع</li>
             </ul>
           </div>
         </div>
@@ -164,7 +160,7 @@
     </section>
     <section id="features" class="features">
       <div class="container">
-        <h2 data-i18n="features_title">Extra Features</h2>
+        <h2 data-i18n="features_title">مميزات إضافية</h2>
         <div class="features-img-group slider" id="featuresSlider">
           <img src="images/6.png" alt="Features 1">
           <img src="images/7.png" alt="Features 2">
@@ -173,35 +169,35 @@
           <img src="images/10.png" alt="Features 5">
         </div>
         <ul>
-          <li data-i18n="install_48h">Installation within 48 hours</li>
-          <li data-i18n="support_phone">Support via phone & WhatsApp</li>
-          <li data-i18n="urban_rural">Urban & rural coverage</li>
-          <li data-i18n="flex_contract">Flexible contracts, no long-term commitment</li>
-          <li data-i18n="mobile_app">Mobile app for usage tracking</li>
-          <li data-i18n="updates">Continuous updates & improvements</li>
+          <li data-i18n="install_48h">تركيب خلال 48 ساعة</li>
+          <li data-i18n="support_phone">دعم عبر الهاتف وواتساب</li>
+          <li data-i18n="urban_rural">تغطية حضرية وريفية</li>
+          <li data-i18n="flex_contract">عقود مرنة، لا التزام طويل الأجل</li>
+          <li data-i18n="mobile_app">تطبيق موبايل لتتبع الاستخدام</li>
+          <li data-i18n="updates">تحديثات وتحسينات مستمرة</li>
         </ul>
       </div>
     </section>
     <section id="faq" class="faq">
       <div class="container">
-        <h2 data-i18n="faq_title">FAQ</h2>
+        <h2 data-i18n="faq_title">الأسئلة الشائعة</h2>
         <details>
-          <summary data-i18n="faq_country">Is the service available in my country?</summary>
-          <p data-i18n="faq_country_ans">Yes, available in every country worldwide.</p>
+          <summary data-i18n="faq_country">هل الخدمة متاحة في بلدي؟</summary>
+          <p data-i18n="faq_country_ans">نعم، متاحة في كل دولة حول العالم.</p>
         </details>
         <details>
-          <summary data-i18n="faq_equipment">Do I need special equipment?</summary>
-          <p data-i18n="faq_equipment_ans">We provide a modern receiver device with free installation in some plans.</p>
+          <summary data-i18n="faq_equipment">هل أحتاج إلى معدات خاصة؟</summary>
+          <p data-i18n="faq_equipment_ans">نحن نوفر جهاز استقبال حديث مع تركيب مجاني في بعض الباقات.</p>
         </details>
         <details>
-          <summary data-i18n="faq_payment">What payment methods are accepted?</summary>
-          <p data-i18n="faq_payment_ans">All major cards, bank transfers, and cash on installation in some countries.</p>
+          <summary data-i18n="faq_payment">ما هي طرق الدفع المقبولة؟</summary>
+          <p data-i18n="faq_payment_ans">جميع البطاقات الرئيسية، التحويلات البنكية، والنقد عند التركيب في بعض الدول.</p>
         </details>
       </div>
     </section>
     <section id="partners" class="partners">
       <div class="container">
-        <h2 data-i18n="partners_title">Our Partners</h2>
+        <h2 data-i18n="partners_title">شركاؤنا</h2>
         <div class="partners-img-group slider" id="partnersSlider">
           <img src="images/1.png" alt="Partner 1">
           <img src="images/2.png" alt="Partner 2">
@@ -209,12 +205,12 @@
           <img src="images/4.png" alt="Partner 4">
           <img src="images/5.png" alt="Partner 5">
         </div>
-        <p data-i18n="partners_desc">We collaborate with leading global and regional technology companies to deliver the best satellite internet experience.</p>
+        <p data-i18n="partners_desc">نتعاون مع شركات تكنولوجيا رائدة عالمياً وإقليمياً لتقديم أفضل تجربة إنترنت فضائي.</p>
       </div>
     </section>
     <section id="invest" class="invest">
       <div class="container">
-        <h2 data-i18n="invest_title">Invest with Us</h2>
+        <h2 data-i18n="invest_title">استثمر معنا</h2>
         <div class="invest-img-group slider" id="investSlider">
           <img src="images/6.png" alt="Invest 1">
           <img src="images/7.png" alt="Invest 2">
@@ -222,58 +218,58 @@
           <img src="images/9.png" alt="Invest 4">
           <img src="images/10.png" alt="Invest 5">
         </div>
-        <p data-i18n="invest_desc">Join our journey to connect the world. We welcome investors and partners to expand our global reach and impact.</p>
-        <a href="#contact" class="cta" data-i18n="contact_invest">Contact for Investment</a>
+        <p data-i18n="invest_desc">انضموا إلينا في رحلتنا لربط العالم. نرحب بالمستثمرين والشركاء لتوسيع نطاقنا العالمي وتأثيرنا.</p>
+        <a href="#contact" class="cta" data-i18n="contact_invest">تواصل للاستثمار</a>
       </div>
     </section>
     <section id="signup" class="signup">
       <div class="container">
-        <h2 data-i18n="signup_title">Sign Up</h2>
+        <h2 data-i18n="signup_title">اشترك الآن</h2>
         <form id="signupForm">
-          <input type="text" name="name" placeholder="Full Name" required>
-          <input type="email" name="email" placeholder="Email" required>
+          <input type="text" name="name" placeholder="الاسم الكامل" required>
+          <input type="email" name="email" placeholder="البريد الإلكتروني" required>
           <select name="country" id="countrySelect" required></select>
-          <input type="tel" name="phone" id="phoneInput" placeholder="Phone Number" required>
+          <input type="tel" name="phone" id="phoneInput" placeholder="رقم الهاتف" required>
           <select name="plan" required>
-            <option value="">Select Plan</option>
-            <option value="basic">Basic</option>
-            <option value="premium">Premium</option>
-            <option value="business">Business</option>
+            <option value="">اختر الباقة</option>
+            <option value="basic">أساسي</option>
+            <option value="premium">مميز</option>
+            <option value="business">أعمال</option>
           </select>
-          <button type="submit" data-i18n="signup_btn">Sign Up</button>
+          <button type="submit" data-i18n="signup_btn">اشترك</button>
         </form>
       </div>
     </section>
     <section id="contact" class="contact">
       <div class="container">
-        <h2 data-i18n="contact_title">Contact Us</h2>
+        <h2 data-i18n="contact_title">تواصل معنا</h2>
         <form id="contactForm">
-          <input type="text" name="name" placeholder="Name" required>
-          <input type="email" name="email" placeholder="Email" required>
-          <textarea name="message" placeholder="Your message" required></textarea>
-          <button type="submit" data-i18n="send">Send</button>
+          <input type="text" name="name" placeholder="الاسم" required>
+          <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+          <textarea name="message" placeholder="رسالتك" required></textarea>
+          <button type="submit" data-i18n="send">إرسال</button>
         </form>
         <div class="contact-info">
-          <p data-i18n="whatsapp">Or contact us via WhatsApp: <a href="https://wa.me/1234567890">1234567890</a></p>
+          <p data-i18n="whatsapp">أو تواصل معنا عبر واتساب: <a href="https://wa.me/1234567890">1234567890</a></p>
         </div>
       </div>
     </section>
     <section id="global" class="global">
       <div class="container">
-        <h2>Our Global Presence</h2>
+        <h2>تواجدنا العالمي</h2>
         <p>
-          <strong>Headquarters:</strong> Singapore (Main HQ), Canada, United Kingdom, USA, India, China, UAE.<br>
-          Operating in over <strong>100 countries</strong> with partners and agents in <strong>160+ countries</strong>.<br>
-          Full coverage for every spot on Earth: cities, oceans, air, deserts, forests, poles, and remote areas.
+          <strong>المقرات الرئيسية:</strong> سنغافورة، كندا، ألمانيا، الإمارات، ماليزيا، النرويج، جنوب أفريقيا، المملكة المتحدة، الولايات المتحدة، الهند، الصين.<br>
+          نعمل في أكثر من <strong>100 دولة</strong> مع شركاء ووكلاء في <strong>160+ دولة</strong>.<br>
+          تغطية كاملة لكل بقعة على الأرض: مدن، محيطات، أجواء، صحارى، غابات، أقطاب، ومناطق نائية.
         </p>
-        <div class="global-img-group slider" id="globalSlider">
+        <div class="global-img-group slider large-slider" id="globalSlider">
           <img src="images/1.png" alt="Global 1">
           <img src="images/2.png" alt="Global 2">
           <img src="images/3.png" alt="Global 3">
           <img src="images/4.png" alt="Global 4">
           <img src="images/5.png" alt="Global 5">
         </div>
-        <h3>Our Technology & Strategic Partners</h3>
+        <h3>تكنولوجياتنا وشركاؤنا الاستراتيجيون</h3>
         <ul class="partners-list">
           <li>Galaxy</li>
           <li>Huawei</li>
@@ -291,40 +287,40 @@
           <li>Microsoft Azure</li>
           <li>SpaceTech</li>
           <li>StarCom</li>
-          <li>and 50+ more global tech leaders</li>
+          <li>و 50+ من قادة التكنولوجيا العالميين</li>
         </ul>
-        <h3>Success Stories</h3>
+        <h3>قصص نجاح</h3>
         <ul class="success-list">
-          <li>Deployed in 100+ countries, with seamless coverage in remote islands, ships, aircraft, and polar expeditions.</li>
-          <li>Trusted by governments, NGOs, and Fortune 500 companies for mission-critical connectivity.</li>
-          <li>Enabled digital transformation in rural Africa, Asia, and South America.</li>
-          <li>Supported disaster relief and emergency response in over 30 countries.</li>
+          <li>تم النشر في أكثر من 100 دولة، مع تغطية سلسة في الجزر النائية، السفن، الطائرات، والبعثات القطبية.</li>
+          <li>موثوق بها من قبل الحكومات، المنظمات غير الحكومية، وشركات فورتشن 500 للاتصالات الحيوية.</li>
+          <li>مكنت التحول الرقمي في المناطق الريفية في أفريقيا، آسيا، وأمريكا الجنوبية.</li>
+          <li>دعمت الإغاثة في الكوارث والاستجابة للطوارئ في أكثر من 30 دولة.</li>
         </ul>
-        <h3>What Leaders Say</h3>
+        <h3>آراء القادة</h3>
         <div class="testimonials">
           <blockquote>
-            <p>“OneWorld SatNet changed the way we connect our remote mining operations. Reliable and fast!”</p>
-            <footer>— John Smith, Canada</footer>
+            <p>“غيرت OneWorld SatNet طريقة ربط عمليات التعدين النائية لدينا. موثوقة وسريعة!”</p>
+            <footer>— جون سميث، كندا</footer>
           </blockquote>
           <blockquote>
-            <p>“Finally, true global internet for our airline fleet. Passengers are delighted.”</p>
-            <footer>— Aisha Al Mansoori, UAE</footer>
+            <p>“أخيرًا، إنترنت عالمي حقيقي لأسطولنا الجوي. المسافرون سعداء.”</p>
+            <footer>— عائشة المنصوري، الإمارات</footer>
           </blockquote>
           <blockquote>
-            <p>“We brought e-learning to Himalayan villages thanks to OneWorld SatNet.”</p>
-            <footer>— Priya Patel, India</footer>
+            <p>“أحضرنا التعليم الإلكتروني إلى القرى الهيمالية بفضل OneWorld SatNet.”</p>
+            <footer>— بريا باتيل، الهند</footer>
           </blockquote>
           <blockquote>
-            <p>“Our research team in Antarctica never lost connection, even in the harshest conditions.”</p>
-            <footer>— Dr. Liu Wei, China</footer>
+            <p>“لم تفقد فريق البحث لدينا في القارة القطبية الجنوبية الاتصال، حتى في أقسى الظروف.”</p>
+            <footer>— د. ليو وي، الصين</footer>
           </blockquote>
           <blockquote>
-            <p>“A game changer for maritime connectivity. Our fleet is always online.”</p>
-            <footer>— Captain James Brown, UK</footer>
+            <p>“تغيير قواعد اللعبة للاتصالات البحرية. أسطولنا دائمًا على الإنترنت.”</p>
+            <footer>— الكابتن جيمس براون، المملكة المتحدة</footer>
           </blockquote>
           <blockquote>
-            <p>“We rely on OneWorld SatNet for secure, global blockchain operations.”</p>
-            <footer>— Changpeng Zhao, Binance</footer>
+            <p>“نعتمد على OneWorld SatNet لعمليات البلوكتشين العالمية الآمنة.”</p>
+            <footer>— تشانغ بينغ زهاو، باينانس</footer>
           </blockquote>
         </div>
       </div>
@@ -332,7 +328,15 @@
   </main>
   <footer>
     <div class="container">
-      <p>&copy; OneWorld SatNet 2025. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="https://wa.me/1234567890" target="_blank" title="WhatsApp"><img src="images/whatsapp.svg" alt="WhatsApp"></a>
+        <a href="https://t.me/oneworldsatnet" target="_blank" title="Telegram"><img src="images/telegram.svg" alt="Telegram"></a>
+        <a href="https://twitter.com/oneworldsatnet" target="_blank" title="X"><img src="images/x.svg" alt="X"></a>
+        <a href="mailto:info@oneworldsatnet.com" target="_blank" title="Email"><img src="images/email.svg" alt="Email"></a>
+        <a href="https://facebook.com/oneworldsatnet" target="_blank" title="Facebook"><img src="images/facebook.svg" alt="Facebook"></a>
+        <a href="https://linkedin.com/company/oneworldsatnet" target="_blank" title="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+      </div>
+      <p>&copy; OneWorld SatNet 2025. جميع الحقوق محفوظة.</p>
     </div>
   </footer>
   <script src="main.js"></script>

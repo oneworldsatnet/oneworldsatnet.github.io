@@ -2,7 +2,7 @@ body {
   font-family: 'Cairo', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f8f9fa;
+  background: linear-gradient(120deg, #f8f9fa 70%, #e3f0ff 100%);
   color: #222;
   direction: ltr;
 }
@@ -42,6 +42,64 @@ nav a.signup-btn {
 nav a:hover, nav a.signup-btn:hover {
   color: #ffd700;
   background: #fff;
+}
+/* قائمة منسدلة احترافية */
+nav .dropdown {
+  position: relative;
+  display: inline-block;
+}
+nav .dropbtn {
+  background: #1e90ff;
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px #0002;
+}
+nav .dropbtn span {
+  font-size: 1.3em;
+  margin-right: 8px;
+}
+nav .dropbtn:hover {
+  background: #0a2342;
+}
+nav .dropdown-content {
+  display: none;
+  position: absolute;
+  background: #fff;
+  min-width: 200px;
+  box-shadow: 0 4px 16px #0002;
+  z-index: 100;
+  border-radius: 10px;
+  right: 0;
+  top: 48px;
+  padding: 8px 0;
+}
+nav .dropdown-content a {
+  color: #0a2342;
+  padding: 12px 24px;
+  text-decoration: none;
+  display: block;
+  border-radius: 0;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+nav .dropdown-content a.signup-btn {
+  background: #ffd700;
+  color: #0a2342;
+  font-weight: bold;
+  border-radius: 0 0 10px 10px;
+}
+nav .dropdown-content a:hover, nav .dropdown-content a.signup-btn:hover {
+  background: #1e90ff;
+  color: #fff;
+}
+nav .dropdown:hover .dropdown-content {
+  display: block;
 }
 .hero {
   background: linear-gradient(120deg, #0a2342 60%, #1e90ff 100%);
@@ -85,9 +143,9 @@ nav a:hover, nav a.signup-btn:hover {
 section {
   margin: 40px 0;
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px #0001;
-  padding: 32px 0;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px #0001;
+  padding: 40px 0;
 }
 h2 {
   color: #0a2342;
@@ -139,12 +197,22 @@ h2 {
   position: relative;
 }
 .plan img {
-  max-width: 80px;
-  margin-bottom: 10px;
+  display: none;
 }
 .plan.popular {
-  border: 2px solid #ffd700;
-  background: #fffbe6;
+  box-shadow: 0 0 0 4px #ffd70055;
+}
+.plan.plan-blue {
+  background: linear-gradient(135deg, #e3f0ff 60%, #cbe7ff 100%);
+  border: 2px solid #1e90ff;
+}
+.plan.plan-pink {
+  background: linear-gradient(135deg, #ffe3f6 60%, #ffd6ec 100%);
+  border: 2px solid #ff69b4;
+}
+.plan.plan-green {
+  background: linear-gradient(135deg, #e3ffe9 60%, #caffd6 100%);
+  border: 2px solid #00c97b;
 }
 .price {
   font-size: 2em;
@@ -300,6 +368,73 @@ footer {
   margin-top: 8px;
   font-style: normal;
 }
+/* تكبير السلايدر والصور الرئيسية */
+.hero-img-group.large-slider img,
+.global-img-group.large-slider img {
+  max-width: 180px;
+  max-height: 180px;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px #0002;
+}
+.hero-img-group.large-slider,
+.global-img-group.large-slider {
+  gap: 24px;
+}
+
+/* حركة العنوان الرئيسي */
+.hero-title-rotating {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  font-size: 2.7em;
+  font-weight: bold;
+  color: #ffd700;
+  position: relative;
+  height: 1.2em;
+  overflow: hidden;
+}
+.hero-title-rotating span {
+  display: none;
+  animation: rotateTitle 6s infinite;
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+.hero-title-rotating span:first-child {
+  display: block;
+  animation-delay: 0s;
+}
+.hero-title-rotating span:last-child {
+  display: block;
+  animation-delay: 3s;
+}
+@keyframes rotateTitle {
+  0% { opacity: 1; }
+  45% { opacity: 1; }
+  50% { opacity: 0; }
+  95% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* أيقونات التواصل الاجتماعي */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 12px;
+}
+.social-icons a img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 8px #0001;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.social-icons a:hover img {
+  transform: scale(1.15) rotate(-8deg);
+  box-shadow: 0 4px 16px #1e90ff44;
+}
 @media (max-width: 1000px) {
   .hero-content, .about-flex, .plans, .partners-logos {
     flex-direction: column;
@@ -322,4 +457,6 @@ footer {
     flex-direction: column;
     align-items: flex-start;
   }
+  .hero-title-rotating { font-size: 1.5em; }
+  .hero-img-group.large-slider img, .global-img-group.large-slider img { max-width: 100px; max-height: 100px; }
 }
