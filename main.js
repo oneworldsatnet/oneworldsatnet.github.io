@@ -120,16 +120,74 @@ function updateContent() {
   });
 }
 
-// Email sending (Sign Up & Contact) - using EmailJS
+// عرض رسالة داخل الصفحة بدلاً من alert
+function showMessage(form, message, type = 'success') {
+  let msg = form.querySelector('.form-message');
+  if (!msg) {
+    msg = document.createElement('div');
+    msg.className = 'form-message';
+    form.appendChild(msg);
+  }
+  msg.textContent = message;
+  msg.style.color = type === 'success' ? '#00c97b' : '#e74c3c';
+  msg.style.background = type === 'success' ? '#e8fff2' : '#fff0f0';
+  msg.style.border = '1px solid ' + (type === 'success' ? '#00c97b' : '#e74c3c');
+  msg.style.padding = '10px';
+  msg.style.marginTop = '10px';
+  msg.style.borderRadius = '8px';
+  msg.style.textAlign = 'center';
+}
+
+// EmailJS integration مع مؤشرات تحميل ورسائل احترافية
 function sendMail(form, subject) {
-  // EmailJS integration
+  showMessage(form, 'Sending... Please wait.', 'info');
   emailjs.sendForm('service_1w7w7qg', 'template_6v7z8k9', form, 'Qw1Er2Ty3Ui4Op5')
     .then(function() {
-      alert('Thank you for signing up! Your request has been received. Our team will contact you soon.\n\nWelcome to OneWorld SatNet!\n\nBest regards,\nOneWorld SatNet Team');
+      showMessage(form, 'Thank you! Your request has been received. Our team will contact you soon.', 'success');
       form.reset();
     }, function(error) {
-      alert('There was an error sending your request. Please try again later.');
+      showMessage(form, 'There was an error sending your request. Please try again later.', 'error');
     });
+}
+
+// التحقق من صحة البريد الإلكتروني
+function validateEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+// التحقق من الحقول المطلوبة
+function validateForm(form) {
+  let valid = true;
+  form.querySelectorAll('input[required], select[required]').forEach(input => {
+    if (!input.value.trim()) valid = false;
+    if (input.type === 'email' && !validateEmail(input.value)) valid = false;
+  });
+  return valid;
+}
+
+const signupForm = document.getElementById('signupForm');
+if (signupForm) {
+  signupForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (!validateForm(signupForm)) {
+      showMessage(signupForm, 'Please fill all fields correctly.', 'error');
+      return;
+    }
+    sendMail(signupForm, 'New Signup Request');
+  });
+}
+
+// دعم نموذج الشريك إذا أضفته مستقبلاً بنفس الطريقة
+const partnerForm = document.getElementById('partnerForm');
+if (partnerForm) {
+  partnerForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (!validateForm(partnerForm)) {
+      showMessage(partnerForm, 'Please fill all fields correctly.', 'error');
+      return;
+    }
+    sendMail(partnerForm, 'New Partner Request');
+  });
 }
 
 // تحميل مكتبة EmailJS
@@ -139,22 +197,3 @@ function sendMail(form, subject) {
   script.onload = function() { emailjs.init('Qw1Er2Ty3Ui4Op5'); };
   document.head.appendChild(script);
 })();
-
-const signupForm = document.getElementById('signupForm');
-if (signupForm) {
-  signupForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    sendMail(signupForm, 'New Signup Request');
-    alert('Thank you for signing up! We will contact you soon.');
-    signupForm.reset();
-  });
-}
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-  contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    sendMail(contactForm, 'Contact Form Message');
-    alert('Your message has been sent!');
-    contactForm.reset();
-  });
-}
