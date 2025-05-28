@@ -564,6 +564,145 @@ footer {
 .hero-img-group.large-slider {
   gap: 28px;
 }
+
+/* قسم المنصات الداعمة */
+.supported-platforms {
+  background: linear-gradient(120deg, #1e90ff 10%, #0a2342 90%);
+  color: #fff;
+  border-radius: 18px;
+  margin: 40px 0;
+  padding: 40px 0;
+  box-shadow: 0 4px 24px #0002;
+}
+.platforms-grid {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 32px 0 16px 0;
+}
+.platform-card {
+  background: #fff2;
+  border-radius: 16px;
+  padding: 24px 18px;
+  width: 160px;
+  text-align: center;
+  box-shadow: 0 2px 8px #0001;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.platform-card:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 8px 32px #0003;
+}
+.platform-icon {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 12px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 6px #0002;
+}
+.platforms-desc {
+  text-align: center;
+  margin-top: 12px;
+  color: #e0e0e0;
+  font-size: 1.1em;
+}
+
+/* قسم قصص النجاح */
+.success-stories {
+  background: linear-gradient(120deg, #fff 60%, #e3f0ff 100%);
+  border-radius: 18px;
+  margin: 40px 0;
+  padding: 40px 0;
+  box-shadow: 0 4px 16px #0001;
+}
+.stories-grid {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 32px 0 0 0;
+}
+.story-card {
+  background: #f8f9fa;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 20px 16px;
+  width: 220px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s;
+}
+.story-card:hover {
+  box-shadow: 0 8px 32px #1e90ff33;
+}
+.story-card img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+  box-shadow: 0 1px 6px #0002;
+}
+.story-card h4 {
+  color: #1e90ff;
+  margin: 10px 0 6px 0;
+  font-size: 1.1em;
+}
+.story-card p {
+  color: #333;
+  font-size: 0.98em;
+}
+.supported-companies {
+  background: #fff;
+  border-radius: 18px;
+  margin: 40px 0;
+  padding: 40px 0;
+  box-shadow: 0 4px 16px #0001;
+}
+.companies-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+  margin: 32px 0 0 0;
+}
+.company-card {
+  background: #f1f7ff;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px #0001;
+  padding: 12px 10px 8px 10px;
+  width: 110px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.company-card:hover {
+  box-shadow: 0 8px 32px #1e90ff33;
+  transform: scale(1.07);
+}
+.company-card img {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  margin-bottom: 7px;
+  object-fit: contain;
+  background: #fff;
+  box-shadow: 0 1px 6px #0002;
+}
+.company-card span {
+  font-size: 0.95em;
+  color: #0a2342;
+  font-weight: 500;
+}
 @media (max-width: 1000px) {
   .hero-content, .about-flex, .plans, .partners-logos {
     flex-direction: column;

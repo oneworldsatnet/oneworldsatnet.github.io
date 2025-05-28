@@ -120,15 +120,26 @@ function updateContent() {
   });
 }
 
-// Email sending (Sign Up & Contact) - using mailto fallback
+// Email sending (Sign Up & Contact) - using EmailJS
 function sendMail(form, subject) {
-  const data = new FormData(form);
-  let body = '';
-  for (let [k, v] of data.entries()) {
-    body += `${k}: ${v}\n`;
-  }
-  window.location.href = `mailto:oneworldsatnet@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  // EmailJS integration
+  emailjs.sendForm('service_1w7w7qg', 'template_6v7z8k9', form, 'Qw1Er2Ty3Ui4Op5')
+    .then(function() {
+      alert('Thank you for signing up! Your request has been received. Our team will contact you soon.\n\nWelcome to OneWorld SatNet!\n\nBest regards,\nOneWorld SatNet Team');
+      form.reset();
+    }, function(error) {
+      alert('There was an error sending your request. Please try again later.');
+    });
 }
+
+// تحميل مكتبة EmailJS
+(function(){
+  var script = document.createElement('script');
+  script.src = 'https://cdn.emailjs.com/dist/email.min.js';
+  script.onload = function() { emailjs.init('Qw1Er2Ty3Ui4Op5'); };
+  document.head.appendChild(script);
+})();
+
 const signupForm = document.getElementById('signupForm');
 if (signupForm) {
   signupForm.addEventListener('submit', function(e) {
