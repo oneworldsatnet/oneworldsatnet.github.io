@@ -141,7 +141,17 @@ function showMessage(form, message, type = 'success') {
 // EmailJS integration مع مؤشرات تحميل ورسائل احترافية
 function sendMail(form, subject) {
   showMessage(form, 'Sending... Please wait.', 'info');
-  emailjs.sendForm('service_1w7w7qg', 'template_6v7z8k9', form, 'Qw1Er2Ty3Ui4Op5')
+  // إعدادات EmailJS لإرسال إشعار إلى بريد oneworldsatnet@gmail.com
+  emailjs.send('service_1w7w7qg', 'template_6v7z8k9', {
+    from_name: form.name ? form.name.value : '',
+    from_email: form.email ? form.email.value : '',
+    country: form.country ? form.country.value : '',
+    phone: form.phone ? form.phone.value : '',
+    plan: form.plan ? form.plan.value : '',
+    message: form.message ? form.message.value : '',
+    to_email: 'oneworldsatnet@gmail.com',
+    subject: subject
+  }, 'Qw1Er2Ty3Ui4Op5')
     .then(function() {
       showMessage(form, 'Thank you! Your request has been received. Our team will contact you soon.', 'success');
       form.reset();
